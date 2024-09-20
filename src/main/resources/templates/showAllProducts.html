@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Products</title>
+</head>
+<body>
+<div th:each="item: ${productList}">
+    <!--    <p th:text="${item.name}"></p>-->
+    <!--    <p th:text="${item.price}"></p>-->
+    <div th:object="${item}" class="productCard" >
+
+        <p th:text="*{name}"/>
+        <p th:text="*{price}"/>
+<!--        <p th:if="${item.productInfo != null}" th:src="*{productInfo}"/>-->
+    </div>
+    <p>--------------------</p>
+</div>
+</body>
+</html>

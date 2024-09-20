@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elishop</title>
+    <link th:href="@{static-files/css/homeStyle.css}" rel="stylesheet">
+</head>
+<body>
+<img th:src="@{static-files/images/Orchid2.jpg}" alt="Elishop Logo">
+<h1 th:text="'Welcome To'+${shopName}"></h1>
+<div th:each="item: ${productList}">
+    <!--    <p th:text="${item.name}"></p>-->
+    <!--    <p th:text="${item.price}"></p>-->
+    <div th:object="${item}" class="productCard"  >
+
+        <p th:text="*{name}"/>
+        <p th:text="*{price}"/>
+
+    </div>
+    <p>--------------------</p>
+</div>
+</body>
+</html>
