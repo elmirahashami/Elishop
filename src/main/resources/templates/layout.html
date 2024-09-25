@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-$END$
+
+
+<div th:replace="fragments/searchBarForm :: searchForm"></div>
+
+
+<div th:fragment="content">
+    <p>Page content goes here.</p>
+</div>
+
 </body>
 </html>
